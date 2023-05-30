@@ -1,0 +1,139 @@
+.join {
+  width: 100%;
+  height: 545px;
+  position: relative;
+  z-index: 1;
+}
+
+.join .container {
+  margin-top: 350px;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 190px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.join::before {
+  content: "";
+  background: #ff00c7;
+  border-radius: 50%;
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  left: 350px;
+  top: 200px;
+  filter: blur(400px);
+  z-index: -1;
+}
+
+.join::after {
+  content: "";
+  background: #7000ff;
+  border-radius: 50%;
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  right: 320px;
+  top: 200px;
+  filter: blur(400px);
+  z-index: -1;
+}
+
+.left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 39px;
+}
+
+.left h3 {
+  color: #ecf1f0;
+  gap: 8px;
+}
+
+.left p {
+  color: var(--para);
+  padding: 10px 10px 10px 0px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.left .btn-group-join {
+  padding: 0px 400px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.btn-group-join .btn {
+  width: 190px;
+  text-align: center;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  align-self: stretch;
+  height: 430px;
+}
+
+.card-join {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 18px;
+  border: 1px #ffffff05 solid;
+  padding: 10px 52px 20px 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 21px;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  align-self: stretch;
+  transition: 0.5s;
+}
+
+.card-join:hover {
+  background-color: #11011e;
+  border: 1px solid var(--para);
+  transition: 0.5s;
+  transform: translateY(-5px) scale(1.005) translateZ(0);
+}
+
+.title {
+  padding: 10px;
+}
+
+.title h5 {
+  color: #ecf1f0;
+  width: 300px;
+}
+
+.description {
+  padding: 0 10px;
+}
+
+.description p {
+  color: var(--para);
+  font-size: 16px;
+}
+
+@media screen and (max-width: 940px) {
+  .join .container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+}
